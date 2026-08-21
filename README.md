@@ -5,7 +5,7 @@
 
 ## 1. ¿Qué sucede con el cliente si el servidor no está ejecutándose al intentar conectar?
 El cliente no encuentra al servidor en la red y la conexión falla de inmediato.
-<img width="1018" height="300" alt="image" src="https://github.com/user-attachments/assets/92837854-f99c-4cdd-9b49-2077ad7adb18" />
+
 
 
 Excepción de Java:
