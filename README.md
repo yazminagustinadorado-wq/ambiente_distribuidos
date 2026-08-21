@@ -5,6 +5,8 @@
 
 ## 1. ¿Qué sucede con el cliente si el servidor no está ejecutándose al intentar conectar?
 El cliente no encuentra al servidor en la red y la conexión falla de inmediato.
+<img width="1018" height="300" alt="image" src="https://github.com/user-attachments/assets/92837854-f99c-4cdd-9b49-2077ad7adb18" />
+
 
 Excepción de Java:
 `java.net.ConnectException: Connection refused`
@@ -18,3 +20,11 @@ Excepción de Java:
 2. Averiguar la IP: El compañero del servidor debe abrir la terminal y escribir `ipconfig` para ver su IP de Wi-Fi.
 3. Desactivar/Permitir el Firewall: En la PC del servidor hay que dar permiso al puerto (ej: 5500) en el Firewall de Windows para que no bloquee la conexión entrante.
 4. Estar en la misma red: Ambas computadoras deben estar conectadas al mismo Wi-Fi.
+5. 
+##capturas
+6. <img width="1018" height="300" alt="image" src="https://github.com/user-attachments/assets/580e444b-beca-495d-830f-a569c78634fc" />
+7. <img width="1039" height="366" alt="image (1)" src="https://github.com/user-attachments/assets/be60bcfc-b93a-4406-99bb-1f45d6378584" />
+7.<img width="998" height="258" alt="image (2)" src="https://github.com/user-attachments/assets/fd1e1659-6740-44f3-a76d-71d05293a9fe" />
+8.<img width="734" height="173" alt="image (3)" src="https://github.com/user-attachments/assets/8b4c02ce-5580-4033-b970-6aff1a1310ac" />
+
+
