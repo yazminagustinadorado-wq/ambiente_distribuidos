@@ -43,3 +43,10 @@ Cuando un servidor sufre una caída o degradación momentánea, todos los client
   * *Ejemplo:* Pérdida momentánea de paquetes por saturación en la red Wi-Fi.
 * **Fallo Permanente:** Es un error definitivo que no cambiará su estado por sí solo volviendo a intentar la operación. Reintentar únicamente consume recursos de forma innecesaria.
   * *Ejemplo:* Intentar conectar a una IP o puerto donde no hay ningún servicio escuchando, o enviar credenciales de acceso inválidas.
+ Capturas
+<img width="677" height="149" alt="Captura de pantalla 2026-08-26 205824" src="https://github.com/user-attachments/assets/a3ea27fb-457c-48c8-8016-cb20f0d044ed" />
+<img width="819" height="480" alt="Captura de pantalla 2026-08-26 212041" src="https://github.com/user-attachments/assets/dcedc650-dc88-49fb-bd4d-7ef688ce5a76" />
+
+
+ 
+
