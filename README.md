@@ -18,3 +18,23 @@ Excepción de Java:
 2. Averiguar la IP: El compañero del servidor debe abrir la terminal y escribir `ipconfig` para ver su IP de Wi-Fi.
 3. Desactivar/Permitir el Firewall: En la PC del servidor hay que dar permiso al puerto (ej: 5500) en el Firewall de Windows para que no bloquee la conexión entrante.
 4. Estar en la misma red: Ambas computadoras deben estar conectadas al mismo Wi-Fi.
+
+
+---
+
+## TP2: Patrones de Resiliencia y Jitter
+
+### Ejercicio 3: Análisis Teórico
+
+#### 1. ¿Qué problema genera en un servidor saturado que todos los clientes reintenten sus peticiones exactamente al mismo tiempo y con intervalos fijos (sin Jitter)?
+Genera el problema conocido como **Thundering Herd Problem** (*Efecto Estampida*). 
+
+Cuando un servidor sufre una caída o degradación momentánea, todos los clientes desconectados fallan al mismo tiempo. Si utilizan un intervalo de reintento fijo sin variación aleatoria, enviarán sus peticiones en ráfagas síncronas periódicas. Esto evita que el servidor logre recuperarse y provoca caídas en cascada (*cascading failures*).
+
+**Solución con Jitter:** Al añadir un componente aleatorio (`Random(0, 500) ms`), las peticiones de los distintos clientes se distribuyen en el tiempo, desincronizando y suavizando el tráfico sobre el servidor.
+
+#### 2. ¿Qué diferencia existe entre un fallo transitorio y un fallo permanente? Dé un ejemplo de cada uno en una arquitectura distribuida.
+* **Fallo Transitorio:** Es una falla temporal de corta duración (ej. micro-cortes de red, congestión momentánea de sockets o saturación de tráfico). Se soluciona reintentando la operación tras un breve tiempo de espera.
+  * *Ejemplo:* Pérdida momentánea de paquetes por saturación en la red Wi-Fi.
+* **Fallo Permanente:** Es un error definitivo que no cambiará su estado por sí solo volviendo a intentar la operación. Reintentar únicamente consume recursos de forma innecesaria.
+  * *Ejemplo:* Intentar conectar a una IP o puerto donde no hay ningún servicio escuchando, o enviar credenciales de acceso inválidas.
