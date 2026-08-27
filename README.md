@@ -19,21 +19,26 @@ Excepción de Java:
 3. Desactivar/Permitir el Firewall: En la PC del servidor hay que dar permiso al puerto (ej: 5500) en el Firewall de Windows para que no bloquee la conexión entrante.
 4. Estar en la misma red: Ambas computadoras deben estar conectadas al mismo Wi-Fi.
 
+## Capturas
+<img width="1018" height="300" alt="image" src="https://github.com/user-attachments/assets/580e444b-beca-495d-830f-a569c78634fc" />
+<img width="1039" height="366" alt="image (1)" src="https://github.com/user-attachments/assets/be60bcfc-b93a-4406-99bb-1f45d6378584" />
+<img width="998" height="258" alt="image (2)" src="https://github.com/user-attachments/assets/fd1e1659-6740-44f3-a76d-71d05293a9fe" />
+<img width="734" height="173" alt="image (3)" src="https://github.com/user-attachments/assets/8b4c02ce-5580-4033-b970-6aff1a1310ac" />
 
 ---
 
-## TP2: Patrones de Resiliencia y Jitter
+# TP2: Patrones de Resiliencia y Jitter
 
-### Ejercicio 3: Análisis Teórico
+## Ejercicio 3: Análisis Teórico
 
-#### 1. ¿Qué problema genera en un servidor saturado que todos los clientes reintenten sus peticiones exactamente al mismo tiempo y con intervalos fijos (sin Jitter)?
+### 1. ¿Qué problema genera en un servidor saturado que todos los clientes reintenten sus peticiones exactamente al mismo tiempo y con intervalos fijos (sin Jitter)?
 Genera el problema conocido como **Thundering Herd Problem** (*Efecto Estampida*). 
 
 Cuando un servidor sufre una caída o degradación momentánea, todos los clientes desconectados fallan al mismo tiempo. Si utilizan un intervalo de reintento fijo sin variación aleatoria, enviarán sus peticiones en ráfagas síncronas periódicas. Esto evita que el servidor logre recuperarse y provoca caídas en cascada (*cascading failures*).
 
 **Solución con Jitter:** Al añadir un componente aleatorio (`Random(0, 500) ms`), las peticiones de los distintos clientes se distribuyen en el tiempo, desincronizando y suavizando el tráfico sobre el servidor.
 
-#### 2. ¿Qué diferencia existe entre un fallo transitorio y un fallo permanente? Dé un ejemplo de cada uno en una arquitectura distribuida.
+### 2. ¿Qué diferencia existe entre un fallo transitorio y un fallo permanente? Dé un ejemplo de cada uno en una arquitectura distribuida.
 * **Fallo Transitorio:** Es una falla temporal de corta duración (ej. micro-cortes de red, congestión momentánea de sockets o saturación de tráfico). Se soluciona reintentando la operación tras un breve tiempo de espera.
   * *Ejemplo:* Pérdida momentánea de paquetes por saturación en la red Wi-Fi.
 * **Fallo Permanente:** Es un error definitivo que no cambiará su estado por sí solo volviendo a intentar la operación. Reintentar únicamente consume recursos de forma innecesaria.
