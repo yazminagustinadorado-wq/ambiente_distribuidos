@@ -38,6 +38,12 @@ El formato **Binario Directo** ocupó un **56,58% menos de espacio en red** que 
 
 ## 4. Captura de Pantalla del Software Funcionando
 
+<img width="699" height="240" alt="Captura de pantalla 2026-10-22 170546" src="https://github.com/user-attachments/assets/86942ac1-85e2-47e9-bc4e-a5ab6d50051b" />
+
+<img width="676" height="217" alt="Captura de pantalla 2026-10-22 170605" src="https://github.com/user-attachments/assets/954ca926-4e98-4751-9108-9fd9686dbc63" />
+
+
+
 
 
 
