@@ -1,0 +1,8 @@
+classpath:C:\Users\yazmi\.m2\repository\org\apache\pekko\pekko-actor-typed_2.13\1.0.2\pekko-actor-typed_2.13-1.0.2.jar	1274362:1701213516000
+classpath:C:\Users\yazmi\.m2\repository\org\scala-lang\scala-library\2.13.11\scala-library-2.13.11.jar	5966754:1685664384000
+classpath:C:\Users\yazmi\.m2\repository\org\apache\pekko\pekko-actor_2.13\1.0.2\pekko-actor_2.13-1.0.2.jar	4024248:1701213537000
+classpath:C:\Users\yazmi\.m2\repository\com\typesafe\config\1.4.3\config-1.4.3.jar	296029:1697537085000
+classpath:C:\Users\yazmi\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar	41125:1644327230000
+classpath:C:\Users\yazmi\.m2\repository\org\apache\pekko\pekko-slf4j_2.13\1.0.2\pekko-slf4j_2.13-1.0.2.jar	23942:1701213501000
+classpath:C:\Users\yazmi\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar	283517:1701431604000
+classpath:C:\Users\yazmi\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar	597229:1701431559000
