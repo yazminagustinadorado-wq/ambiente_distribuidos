@@ -34,3 +34,6 @@ sequenceDiagram
         Mailbox (Cola FIFO)->>ActorProcesador: Descola mensaje
         Note over ActorProcesador: State Change: Actualiza contador,<br/>acumulador y recalcula promedio
     end
+
+
+<img width="723" height="225" alt="Captura de pantalla 2026-10-23 204421" src="https://github.com/user-attachments/assets/6f97b64c-c5a1-45f0-9cea-633ae6dc9046" />
