@@ -80,3 +80,11 @@ Pasos breves para levantar el servidor y ejecutar el cliente.
 ## 9. Construccion
 
 Se implemento el TP7 con Python, FastAPI, Pydantic, Uvicorn y Requests.
+
+capturas: <img width="1275" height="582" alt="Captura de pantalla 2026-11-12 164707" src="https://github.com/user-attachments/assets/d9a4135d-fbac-4ab6-ab32-e3222418c0d3" />
+<img width="1277" height="597" alt="Captura de pantalla 2026-11-12 165026" src="https://github.com/user-attachments/assets/f32ff4d9-1aae-4d88-a031-c4fdad431f23" />
+<img width="1264" height="482" alt="Captura de pantalla 2026-11-12 165055" src="https://github.com/user-attachments/assets/7f6ed8af-3056-4f78-ba28-106c2f61cd6c" />
+<img width="1281" height="399" alt="Captura de pantalla 2026-11-12 170823" src="https://github.com/user-attachments/assets/90e45c16-6148-4e7b-b5d8-66cc016783b2" />
+
+
+
