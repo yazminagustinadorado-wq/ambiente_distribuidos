@@ -80,4 +80,9 @@ Gestion en entornos productivos:
 - Configuracion de timeouts: limites explicitos de respuesta y conexion a nivel de socket.
 - Mecanismos de fallback: respuestas alternativas desde cache o valores por defecto seguros ante la indisponibilidad del servicio.
 
+- capturas :<img width="627" height="76" alt="Captura de pantalla 2026-11-12 152903" src="https://github.com/user-attachments/assets/d5841bf9-a5d7-44dd-8a25-057989f15e12" />
+
+<img width="491" height="195" alt="Captura de pantalla 2026-11-12 153422" src="https://github.com/user-attachments/assets/81cbecad-7b4f-412e-9344-6705d5dba1f9" />
+
+
 
