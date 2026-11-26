@@ -873,3 +873,6 @@ Si algún CSV de recursos solo tiene el header, el monitor se cortó antes de to
 | Estrés, rampa hasta 250 | 2881 | 23 | 25000 ms | 9,52 |
 
 Los valores pueden variar entre corridas. Lo importante es que la latencia aumente claramente durante la rampa, el RPS caiga y los errores HTTP 503 queden documentados en `estres_failures.csv`.
+
+<img width="1350" height="620" alt="tp10" src="https://github.com/user-attachments/assets/3be1bf36-969e-47cb-a65f-b923d5042edc" />
+<img width="844" height="460" alt="tp10_2" src="https://github.com/user-attachments/assets/34248f6a-006a-45b6-8e64-235dae8aad49" />
