@@ -197,12 +197,12 @@
         <section id="errores" class="card error-card">
           <div class="card-head">
             <div>
-              <h3>Manejo de errores</h3>
-              <p>Probá respuestas 404, 409 y 400 del servicio.</p>
+              <h3>Pruebas de respuestas y errores HTTP status</h3>
+              <p>Probá 400, 404, 409 y 500; abajo se muestra el endpoint consultado y el detalle devuelto por FastAPI.</p>
             </div>
             <div class="error-actions">
               <button id="btnTest400" class="btn btn-danger" type="button">Probar 400</button>
-              <button id="btnTest404" class="btn btn-danger" type="button">Probar 404</button>
+              <button id="btnTest404" class="btn btn-danger" type="button">Probar producto 777</button>
               <button id="btnTest409" class="btn btn-danger" type="button">Probar 409</button>
               <button id="btnTest500" class="btn btn-danger" type="button">Probar 500</button>
             </div>
@@ -213,9 +213,11 @@
               <span id="errorUrl" class="error-url"></span>
               <span id="errorStatus" class="error-status"></span>
             </div>
+            <p class="error-line"><strong>Endpoint consultado:</strong> <span id="errorEndpoint"></span></p>
+            <p class="error-line"><strong>Detalle devuelto por FastAPI:</strong> <span id="errorDetail"></span></p>
             <pre id="errorBody"></pre>
           </div>
-          <p id="errorHint" class="hint">Sin errores recientes. Probá 400, 404, 409 o 500 con los botones; el panel mostrará método, URL, código y cuerpo.</p>
+          <p id="errorHint" class="hint">Sin errores recientes. Los botones muestran código, endpoint y detalle devuelto por el servicio.</p>
         </section>
       </main>
     </div>

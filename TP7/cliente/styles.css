@@ -653,6 +653,16 @@ tbody tr:hover {
   font-size: 0.78rem;
 }
 
+.error-line {
+  margin: 10px 0 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+.error-line strong {
+  color: #0f172a;
+}
+
 .error-chip {
   background: #fff1f2;
   color: #be123c;

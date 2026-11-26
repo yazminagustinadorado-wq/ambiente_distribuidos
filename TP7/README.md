@@ -97,7 +97,7 @@ TP7/
 
 ## 7. Evidencias de ejecución
 
-> Las imágenes siguientes son evidencia de ejecuciones anteriores. Al defender el TP, reemplazarlas por capturas de esta versión: alta de producto en `Cargar productos`, lista actualizada y los cuatro códigos de error (`400`, `404`, `409`, `500`).
+> Las imágenes siguientes son evidencia de ejecuciones anteriores. Al defender el TP, reemplazarlas por capturas de esta versión: alta de producto en `Cargar productos`, lista actualizada y los cuatro códigos de error (`400`, `404`, `409`, `500`). Para el 404, usar **Probar producto 777**: el panel debe mostrar `GET /productos/777` y el detalle `Producto no encontrado`.
 
 ### Captura 1: Invocación exitosa
 
@@ -125,34 +125,34 @@ Comportamiento del sistema frente a una petición errónea o un fallo simulado.
 
 ## 8. Instrucciones de ejecución
 
-### 8.1 Instalar dependencias
+### 8.1 Instalar dependencias (solo la primera vez)
 
-```bash
-cd TP7/servidor
-pip install -r requirements.txt
+```powershell
+cd C:\Users\Estudiante\ambiente_distribuidos\TP7\servidor; python -m pip install -r requirements.txt
 ```
 
-### 8.2 Levantar el servidor (API + interfaz)
+### 8.2 Levantar y abrir con un solo comando
 
-```bash
-cd TP7/servidor
-uvicorn main:app --reload --host 127.0.0.1 --port 8000
+Copiar y pegar en PowerShell, desde cualquier carpeta:
+
+```powershell
+cd C:\Users\Estudiante\ambiente_distribuidos\TP7\servidor; Start-Process python -ArgumentList '-m','uvicorn','main:app','--reload','--host','127.0.0.1','--port','8000'; Start-Sleep 3; start http://localhost:8000/
 ```
 
-Abrir en el navegador:
+Si el servidor ya está corriendo, alcanza con:
 
-```text
-http://localhost:8000/
+```powershell
+start http://localhost:8000/
 ```
 
-La misma URL sirve la interfaz **VentaFlow**. La documentación interactiva de la API está en `http://localhost:8000/docs`.
+La URL `http://localhost:8000/` sirve la interfaz **VentaFlow**. La documentación interactiva de la API está en `http://localhost:8000/docs`.
 
 Desde la interfaz se puede:
 
 1. Cargar un producto con `POST /productos` y verlo en la lista de inventario.
 2. Registrar una venta con `POST /ventas`.
 3. Consultar ventas con `GET /ventas` y recargar el panel con **Actualizar**.
-4. Probar los errores **400**, **404**, **409** y **500** con los botones del panel.
+4. Probar los errores **400**, **404** (`GET /productos/777` → `Producto no encontrado`), **409** y **500** con los botones del panel; abajo se muestran el endpoint consultado y el detalle devuelto por FastAPI.
 
 ### 8.3 Ejecutar el cliente CLI independiente
 
@@ -168,10 +168,10 @@ El cliente CLI demuestra el mismo contrato desde consola, con timeouts y errores
 ## 9. Control de excepciones
 
 - `400 Bad Request`: payload inválido o `cantidad <= 0`. Botón **Probar 400**.
-- `404 Not Found`: producto o venta inexistente. Botón **Probar 404**.
+- `404 Not Found`: botón **Probar producto 777** → `GET /productos/777` → `detail: "Producto no encontrado"`.
 - `409 Conflict`: ID duplicado o stock insuficiente. Botón **Probar 409**.
 - `500 Internal Server Error`: handler genérico; se fuerza con `GET /debug/error500` y el botón **Probar 500**.
-- El cliente visual muestra `método`, `URL`, `código` y `cuerpo` de cada error.
+- El cliente visual muestra `código`, **endpoint consultado**, **detalle devuelto por FastAPI** y el cuerpo JSON completo de cada error.
 - El cliente CLI captura `requests.RequestException` y respuestas no OK.
 
 ---

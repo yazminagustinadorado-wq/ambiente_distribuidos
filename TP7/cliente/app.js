@@ -113,10 +113,16 @@ function clearError() {
 function showError(error) {
   const details = error.details || {};
   const body = details.body;
+  const path = details.url ? details.url.replace(/^https?:\/\/[^/]+/, "") : "—";
+  const detail = body && typeof body === "object" ? body.detail : body;
 
   $("errorMethod").textContent = details.method || "—";
   $("errorUrl").textContent = details.url || "—";
   $("errorStatus").textContent = details.status || "—";
+  $("errorEndpoint").textContent = `${details.method || "—"} ${path}`;
+  $("errorDetail").textContent = typeof detail === "string"
+    ? detail
+    : JSON.stringify(detail || { message: error.message });
   $("errorBody").textContent = typeof body === "string"
     ? body
     : JSON.stringify(body || { message: error.message }, null, 2);
@@ -354,7 +360,7 @@ $("btnTest400").addEventListener("click", () => probarError(
   { method: "POST", body: JSON.stringify({ id: 0, nombre: "Producto invalido", precio: 10, stock: 1 }) },
   400,
 ));
-$("btnTest404").addEventListener("click", () => probarError("404", "/ventas/999999", {}, 404));
+$("btnTest404").addEventListener("click", () => probarError("Producto 777", "/productos/777", {}, 404));
 $("btnTest409").addEventListener("click", () => probarError(
   "409",
   "/productos",
