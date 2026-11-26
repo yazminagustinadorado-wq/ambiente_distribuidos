@@ -629,3 +629,13 @@ docker compose up -d
 ```powershell
 cd C:\Users\Estudiante\ambiente_distribuidos\TP8; docker compose up -d; Start-Process python -ArgumentList '-m','uvicorn','main:app','--reload','--host','127.0.0.1','--port','8001' -WorkingDirectory 'C:\Users\Estudiante\ambiente_distribuidos\TP8\servidor'; Start-Sleep 5; start http://localhost:8001/docs
 ```
+
+capturas : <img width="819" height="557" alt="captp8" src="https://github.com/user-attachments/assets/c1e3e873-37ba-45db-a1ac-d1e88ffa6189" />
+
+<img width="819" height="460" alt="tp8_2" src="https://github.com/user-attachments/assets/bdf8dabf-9f2e-48c7-9bd3-57e9a27b99f2" />
+<img width="819" height="460" alt="captp8_3" src="https://github.com/user-attachments/assets/5345e9be-d4b2-43d9-a44e-712e0ca683aa" />
+<img width="819" height="460" alt="tp8_4" src="https://github.com/user-attachments/assets/0a644a00-1254-451e-a11a-549d9906aafd" />
+
+<img width="819" height="549" alt="p8_5" src="https://github.com/user-attachments/assets/ddf34c75-51a8-4fbb-9fd6-298078f1137c" />
+
+
